@@ -16,8 +16,8 @@ function generateID() {
 }
 
 // Create object
-function createObject(id, title, author, year, isCompleted) {
-    return {id, title, author, year, isCompleted};
+function createObject(id, title, author, year, isComplete) {
+    return {id, title, author, year, isComplete};
 }
 
 // Read Data in the first load
@@ -40,7 +40,7 @@ const pullBookData = () => {
     const id = +new Date();
     const title = document.querySelector("#fillBookName").value;
     const author = document.querySelector("#fillAuthor").value;
-    const year = document.querySelector("#fillYear").value;
+    const year = Number(document.querySelector("#fillYear").value);
     const isCompleted = document.querySelector("#fillCompleted").checked;
     const data = createObject(id, title, author, year, isCompleted);
 
@@ -86,7 +86,7 @@ function deleteBook(index) {
 
 // Create Book HTML
 function makeBookData(data) {
-    const {id, title, author, year, isCompleted} = data;
+    const {id, title, author, year, isComplete} = data;
 
     // Create container inProgressList
     const container = document.createElement("div");
@@ -112,7 +112,7 @@ function makeBookData(data) {
     const actionListContainer = document.createElement("div");
     actionListContainer.classList.add("action-list");
 
-    if (isCompleted) {
+    if (isComplete) {
         const checkButton = document.createElement("i");
         checkButton.classList.add("gg-undo");
         checkButton.setAttribute("bookID",id);
@@ -121,7 +121,7 @@ function makeBookData(data) {
             undoCompletedBook(findBookIndex(bookID));
         });
         actionListContainer.append(checkButton);
-    } else if (isCompleted === false) {
+    } else if (isComplete === false) {
         const undoButton = document.createElement("i");
         undoButton.classList.add("gg-check-o");
         undoButton.setAttribute("bookID", id);
