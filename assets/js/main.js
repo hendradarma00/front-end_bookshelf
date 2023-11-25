@@ -41,8 +41,8 @@ const pullBookData = () => {
     const title = document.querySelector("#fillBookName").value;
     const author = document.querySelector("#fillAuthor").value;
     const year = Number(document.querySelector("#fillYear").value);
-    const isCompleted = document.querySelector("#fillCompleted").checked;
-    const data = createObject(id, title, author, year, isCompleted);
+    const isComplete = document.querySelector("#fillCompleted").checked;
+    const data = createObject(id, title, author, year, isComplete);
 
     bookArray.push(data);
     document.dispatchEvent(new Event(ADDED_BOOK));
@@ -61,14 +61,14 @@ function saveData() {
 /* BOOKSHELF INTERACTIVITY */
 // Undo Completed Book
 function undoCompletedBook(index) {
-    bookArray[index].isCompleted = false;
+    bookArray[index].isComplete = false;
     document.dispatchEvent(new Event(RENDER_BOOK));
     saveData();
 }
 
 // Move book to completed
 function moveBookToCompleted(index) {
-    bookArray[index].isCompleted = true;
+    bookArray[index].isComplete = true;
     document.dispatchEvent(new Event(RENDER_BOOK));
     saveData();
 }
@@ -237,7 +237,7 @@ document.addEventListener(RENDER_BOOK, function () {
   
     for (const book of bookArray) {
       const bookElement = makeBookData(book);
-      if (book.isCompleted) {
+      if (book.isComplete) {
         completedBooks.append(bookElement);
       } else {
         uncompletedBooks.append(bookElement);
@@ -255,7 +255,7 @@ document.addEventListener(RENDER_SEARCH, function () {
   
     for (const book of searchArray) {
       const bookElement = makeBookData(book);
-      if (book.isCompleted) {
+      if (book.isComplete) {
         completedBooks.append(bookElement);
       } else {
         uncompletedBooks.append(bookElement);
