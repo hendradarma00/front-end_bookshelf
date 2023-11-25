@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap');
+@import url("https://unpkg.com/css.gg/icons/icons.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+    background-color: #7fe0e6;
+    color: white;
+}
+
+main {
+    width: 100%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Section Styling */
+.sectionContainer {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 60%;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 25px;
+    border-color: #7fe0e6;
+    margin: 10px 0px 10px;
+    padding-bottom: 2%;
+}
+
+/* Form Styling */
+.fillBookData {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    border-style: solid;
+    border-color:#7fe0e6;
+    border-width: 2px;
+    border-radius: 25px;
+    
+    margin-top: 10px;
+    padding: 10px 0px 20px 0px;
+}
+
+#fillBookInformation {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.section-title {
+    width: 90%;
+    align-self: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.input {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.input-inline {
+    width: 80%;
+    align-self: center;
+}
+
+.inputField {
+    height: 30px;
+    border-style: solid;
+    border-width: 0 0 2px 0;
+    border-color: #7fe0e6;
+}
+
+#submitBook {
+    background-color: #7fe0e6;
+    align-self: center;
+    width: 80%;
+    margin: 20px 10px;
+    padding: 5px;
+    border-style: none;
+    border-radius: 10px;
+}
+
+/* Search */
+.search-bar {
+    padding: 0px;
+    height: 50px;
+}
+#searchForm {
+    margin: 0px;
+    display: flex;
+    width: 80%;
+    height: 100%;
+    align-self: center;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+
+#searchBookField {
+    width: 70%;
+    height: 100%;
+    border-width: 2px;
+    border-style: solid;
+    border-color:#7fe0e6;
+    border-radius: 5px;
+}
+
+#searchButton {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 20%;
+    padding: 2px;
+    background-color: #7fe0e6;
+    border: #0e6d72 0px solid;
+    border-radius: 5px;
+}
+
+/* Book Container Styling */
+.bookContainer {
+    width: 80%;
+    align-self: center;
+}
+
+.inProgressList {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2%;
+    border-style: solid;
+    border-radius: 10px;
+    border-color:#7fe0e6;
+    
+}
+
+.bookInfo h2 {
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.bookInfo h3 {
+    font-size: 0.6rem;
+    color: gray;
+    font-weight: 400;
+}
+
+.action-list {
+    width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.gg-undo:hover, .gg-trash:hover, .gg-check-o:hover {
+    cursor: pointer;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 40%;
+    height: 20%;
+}
+
+#addedBook {
+    display: none;
+    position:fixed;
+    background-color: white;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 300px;
+    height: 60px;
+    padding: 10px 10px;
+    margin: 0px 10px;
+    border: 2px solid green;
+    border-radius: 10px;
+}

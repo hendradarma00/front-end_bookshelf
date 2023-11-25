@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf Apps</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <header>
+        <h1>Bookshelf Apps</h1>
+    </header>
+    <main>
+        <section class="fillBookData">
+            <form id="fillBookInformation">
+                <div class="section-title">
+                    <h1>Input Bukumu</h1>
+                </div>
+                <div class="input">
+                    <label for="fillBookName">Masukkan Nama Buku</label>
+                    <input type="text" name="bookName" id="fillBookName" class="inputField" placeholder="Belajar" required>
+                </div>
+                <div class="input">
+                    <label for="fillAuthor">Masukkan Nama Penulis</label>
+                    <input type="text" name="author" id="fillAuthor" class="inputField" placeholder="John Doe" required>
+                </div>
+                <div class="input">
+                    <label for="fillYear">Masukkan Tahun Buku</label>
+                    <input type="text" name="year" id="fillYear" class="inputField" placeholder="2012" required>
+                </div>
+                <div class="input-inline">
+                    <label for="fillCompleted">Apakah sudah selesai dibaca?</label>
+                    <input type="checkbox" name="isCompleted" id="fillCompleted">
+                </div>
+                <button type="submit" id="submitBook">Masukkan buku ke dalam rak</button>
+            </form>
+        </section>
+        <section class="sectionContainer search-bar">
+            <form id="searchForm">
+                <input id="searchBookField" type="text">
+                <button type="submit" id="searchButton">
+                    <i class="gg-search"></i>
+                    <span>Cari</span>
+                </button>
+            </form>
+        </section>
+        <section class="bukuInProgress sectionContainer">
+            <div class="section-title">
+                <h1>Sedang dibaca</h1>
+            </div>
+            <div class="bookContainer">
+            </div>
+        </section>
+        <section class="bukuCompleted sectionContainer">
+            <div class="section-title">
+                <h1>Sudah dibaca</h1>
+            </div>
+            <div class="bookContainer">
+            </div>
+        </section>
+    </main>
+    <div id="confirmModal" class="modal">
+        <div class="modal-content">
+            <h3>TERIMA KASIH</h3>
+            <p>Buku telah berhasil dihapus</p>
+        </div>
+    </div>
+
+    <div id="addedBook">
+        <i class="gg-check"></i>
+        <p>Buku berhasil ditambahkan</p>
+    </div>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
